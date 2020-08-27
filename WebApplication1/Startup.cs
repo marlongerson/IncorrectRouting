@@ -26,8 +26,8 @@ namespace WebApplication1
         {
             services.AddRouting(options => { options.ConstraintMap["slugify"] = typeof(SlugifyParameterTransformer); });
 
-            // COMMENT OUT THE LINE BELOW TO REPRODUCE.
-            services.AddRazorPages();
+            // UNCOMMENT THE LINE BELOW TO REPRODUCE.
+            // services.AddRazorPages();
 
             services.AddControllersWithViews();
         }
@@ -55,8 +55,8 @@ namespace WebApplication1
 
             app.UseEndpoints(endpoints =>
             {
-                // COMMENT OUT THE LINE BELOW TO REPRODUCE.
-                endpoints.MapRazorPages();
+                // UNCOMMENT THE LINE BELOW TO REPRODUCE.
+                // endpoints.MapRazorPages();
 
                 endpoints.MapControllerRoute(
                     name: "default",
