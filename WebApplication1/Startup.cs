@@ -24,8 +24,6 @@ namespace WebApplication1
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRouting(options => { options.ConstraintMap["slugify"] = typeof(SlugifyParameterTransformer); });
-
             // UNCOMMENT THE LINE BELOW TO REPRODUCE.
             // services.AddRazorPages();
 
@@ -60,7 +58,7 @@ namespace WebApplication1
 
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller:slugify=Home}/{action:slugify=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

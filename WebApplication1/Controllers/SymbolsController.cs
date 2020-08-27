@@ -14,12 +14,12 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-        [HttpGet("symbols/{symbol}/{slug?}")]
-        public IActionResult Details(
-            [FromRoute] string symbol,
-            [FromRoute] string slug)
-        {
-            return View();
-        }
+        // [HttpGet("symbols/{symbol}/{slug?}")]
+        // public IActionResult Details(
+        //     [FromRoute] string symbol,
+        //     [FromRoute] string slug)
+        // {
+        //     return View();
+        // }
     }
 }
